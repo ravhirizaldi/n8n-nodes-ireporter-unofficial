@@ -1,6 +1,7 @@
 {
 	"name": "n8n-nodes-ireporter-unofficial",
 	"version": "1.0.0",
+	"type": "module",
 	"description": "Custom node for i-Reporter API (auto login & session reuse)",
 	"license": "MIT",
 	"author": {

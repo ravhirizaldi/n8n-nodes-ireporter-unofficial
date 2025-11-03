@@ -25,28 +25,34 @@
 ## Before Publishing
 
 ### 1. Update package.json
+
 Edit the following fields in `package.json`:
+
 - `author.name` - Your name
 - `author.email` - Your email
 - `repository.url` - Your GitHub repository URL
 
 ### 2. Register on npm
+
 - Go to https://www.npmjs.com/signup
 - Create an account
 
 ### 3. Create npm Token
+
 - Login to npmjs.com
 - Go to Profile → Access Tokens → Generate New Token
 - Choose "Automation" type
 - Copy the token
 
 ### 4. Add Token to GitHub
+
 - Go to your GitHub repository → Settings → Secrets and variables → Actions
 - Click "New repository secret"
 - Name: `NPM_TOKEN`
 - Value: Paste your npm token
 
 ### 5. Build and Test Locally
+
 ```bash
 npm run build
 npm run lint
@@ -54,6 +60,7 @@ npm run format:check
 ```
 
 ### 6. Push to GitHub
+
 ```bash
 git add .
 git commit -m "Initial commit with deployment setup"
@@ -61,12 +68,15 @@ git push origin main
 ```
 
 ### 7. Publish
+
 **Option A: Create a GitHub Release**
+
 - Go to GitHub → Releases → Create a new release
 - Tag version (e.g., v1.0.0)
 - This automatically triggers the workflow
 
 **Option B: Manual Workflow**
+
 - Go to GitHub → Actions → "Publish to NPM" → Run workflow
 
 ## Available Scripts
@@ -81,11 +91,13 @@ git push origin main
 ## What Gets Published
 
 Only the `dist` folder contents are published to npm, which includes:
+
 - Compiled JavaScript files (.js)
 - TypeScript declarations (.d.ts)
 - Source maps (.js.map)
 
 The following are excluded from npm:
+
 - Source TypeScript files
 - Configuration files
 - Development dependencies

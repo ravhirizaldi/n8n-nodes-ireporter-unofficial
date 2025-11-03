@@ -45,7 +45,7 @@ npm install n8n-nodes-ireporter
 
 ```json
 {
-  "topId": "12345"
+	"topId": "12345"
 }
 ```
 
