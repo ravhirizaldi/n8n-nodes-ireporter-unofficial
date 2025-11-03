@@ -15,8 +15,11 @@ Custom n8n node for i-Reporter API with automatic login and session management.
 
 1. Go to **Settings > Community Nodes** in your n8n instance
 2. Select **Install a community node**
-3. Enter `n8n-nodes-ireporter`
+3. Enter `n8n-nodes-ireporter-unofficial`
 4. Click **Install**
+5. **Restart n8n** after installation for the node to load properly
+
+> **Note**: If you encounter loading errors, try restarting n8n completely or reinstalling the node.
 
 ### Manual Installation
 
