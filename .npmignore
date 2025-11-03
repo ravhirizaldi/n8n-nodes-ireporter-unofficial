@@ -1,29 +1,33 @@
-# Source files
-nodes/
+# Only keep compiled output in npm package
 src/
-
-# Config files
-tsconfig.json
-eslint.config.js
-.prettierrc
-.prettierignore
-.eslintcache
-
-# Development
-.github/
-*.log
-npm-debug.log*
-
-# Tests
+nodes/
 test/
 tests/
 *.test.ts
 *.spec.ts
 
-# IDE
+# Config & build files
+tsconfig.json
+eslint.config.js
+.prettierrc
+.prettierignore
+.eslintcache
+.eslintrc.*
 .vscode/
 .idea/
+.github/
+Dockerfile
+docker-compose*
+*.log
+npm-debug.log*
 
-# Environment
+# Environment / local dev
 .env
-.env.local
+.env.*
+*.local
+
+# Docs & misc
+README_DEV.md
+*.md~
+*.bak
+*.tmp
