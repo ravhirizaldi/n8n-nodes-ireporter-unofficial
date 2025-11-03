@@ -1,0 +1,29 @@
+# Source files
+nodes/
+src/
+
+# Config files
+tsconfig.json
+eslint.config.js
+.prettierrc
+.prettierignore
+.eslintcache
+
+# Development
+.github/
+*.log
+npm-debug.log*
+
+# Tests
+test/
+tests/
+*.test.ts
+*.spec.ts
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local

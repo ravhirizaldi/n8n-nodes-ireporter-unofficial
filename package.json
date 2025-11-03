@@ -1,0 +1,59 @@
+{
+	"name": "n8n-nodes-ireporter-unofficial",
+	"version": "1.0.0",
+	"description": "Custom node for i-Reporter API (auto login & session reuse)",
+	"license": "MIT",
+	"author": {
+		"name": "Ravhi Rizaldi",
+		"email": "ravhirzld@gmail.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ravhirzld/n8n-nodes-ireporter-unofficial.git"
+	},
+	"keywords": [
+		"n8n-community-node-package",
+		"n8n",
+		"n8n-node",
+		"ireporter"
+	],
+	"main": "dist/index.js",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write \"**/*.{ts,json,md}\"",
+		"format:check": "prettier --check \"**/*.{ts,json,md}\"",
+		"prepublishOnly": "npm run build && npm run lint && npm run format:check"
+	},
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"credentials": [
+			"dist/nodes/IReporter/IReporter.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/IReporter/IReporter.node.js"
+		]
+	},
+	"dependencies": {
+		"axios": "^1.6.0"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	},
+	"devDependencies": {
+		"@types/node": "^22.10.0",
+		"@typescript-eslint/eslint-plugin": "^8.15.0",
+		"@typescript-eslint/parser": "^8.15.0",
+		"eslint": "^9.15.0",
+		"prettier": "^3.3.3",
+		"typescript": "^5.7.2"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	}
+}
